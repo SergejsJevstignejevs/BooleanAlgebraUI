@@ -1,0 +1,41 @@
+.LogicalOperationsSelectionPanel{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 500px;
+    border: 2px solid var(--darker-green-tea-leaf);
+    margin-top: 5px;
+    overflow-y: auto;
+
+    .Select{
+        display: flex;
+        flex-direction: row;
+        text-overflow: ellipsis;
+        height: 35px;
+        width: 100px;
+        margin-top: 5px;
+        outline: none;
+        border: 2px solid var(--darker-green-tea-leaf);
+        border-radius: 5px;
+        background-color: var(--green-tea-leaf);
+        color: var(--darker-green-tea-leaf);
+        font-weight: bold;
+
+        &:focus{
+            outline: 2px solid var(--whitish-green-tea-leaf);
+            outline-offset: -2px;
+        }
+    }
+
+    .Result{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 35px;
+        width: 150px;
+        margin: 5px 0 0 5px;
+        color: var(--darker-green-tea-leaf);
+        font-weight: bold;
+    }
+}

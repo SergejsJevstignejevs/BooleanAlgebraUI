@@ -1,0 +1,113 @@
+.VariableCreationPanel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 250px;
+
+    .OverflowBox{
+        max-height: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 5px;
+        border: 2px solid var(--darker-green-tea-leaf);
+
+        .PanelRow{
+            animation: 1s 1 normal slidein forwards; 
+
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+
+            @keyframes slidein {
+                from {
+                    margin-left: 100%;
+                    width: 300%;
+                }
+            
+                to {
+                    margin-left: 0%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .OverflowBox + .PanelRow {
+        margin-top: 5px;
+        width: 250px;
+    }
+
+    .PanelRow{
+        height: 35px;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .VariableNameInput{
+            margin-right: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5px 0 5px;
+            height: 35px;
+            width: 125px;
+            outline: none;
+            border: 2px solid var(--darker-green-tea-leaf);
+            border-radius: 5px;
+            background-color: var(--green-tea-leaf);
+            color: var(--darker-green-tea-leaf);
+            font-weight: bold;
+
+            &:focus{
+                outline: 2px solid var(--whitish-green-tea-leaf);
+                outline-offset: -2px;
+            }
+        }
+
+        .VariableValueSelect{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            outline: none;
+            border: 2px solid var(--darker-green-tea-leaf);
+            border-radius: 5px;
+            background-color: var(--green-tea-leaf);
+            color: var(--darker-green-tea-leaf);
+            font-weight: bold;
+
+            &:focus{
+                outline: 2px solid var(--whitish-green-tea-leaf);
+                outline-offset: -2px;
+            }
+        }
+
+        .AddVariableButton{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            width: 100px;
+            outline: none;
+            border: 2px solid var(--darker-green-tea-leaf);
+            border-radius: 5px;
+            background-color: var(--green-tea-leaf);
+            color: var(--darker-green-tea-leaf);
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            &:hover{
+                background-color: var(--whitish-green-tea-leaf);
+            }
+        }
+    }
+}
